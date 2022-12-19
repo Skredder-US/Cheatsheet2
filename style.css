@@ -1,0 +1,135 @@
+@font-face {
+    font-family: Apercu;
+    src: url("https://static-assets.codecademy.com/gamut/apercu-regular-pro.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Apercu;
+    src: url("https://static-assets.codecademy.com/gamut/apercu-bold-pro.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    --color-text: #10162F;
+}
+
+body {
+    font-family: Apercu;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem 0;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Main navigation */
+
+header {
+    position: sticky;
+    z-index: 1;
+    height: 5rem;
+    border-bottom: 1px solid var(--color-text);
+}
+
+header nav {
+    height: 100%;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 6rem;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+header nav li {
+    margin: 0 0.5rem;
+}
+
+header nav li:first-of-type {
+    margin-left: 0;
+}
+
+header nav li:last-of-type {
+    margin-right: 0;
+}
+
+header nav a {
+    display: flex;
+}
+
+#logo-link {
+    padding: 0.25rem 0;
+}
+
+#logo {
+    height: 27px;
+}
+
+header nav button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+/* needed to add width to accommodate for bold text */
+header nav .button-text::after {
+    content: attr(title);
+    font-weight: bold;
+    display: block;
+    height: 1px;
+    color: transparent;
+}
+
+header nav .chevron-down {
+    width: 12px;
+    height: 12px;
+    margin-left: 0.3125rem;
+}
+
+#right-column-start {
+    margin-left: auto;
+}
+
+header nav .button-icon {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 2px solid transparent;
+    justify-content: center;
+}
+
+header nav .button-icon svg {
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+}
+
+header nav .button-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
